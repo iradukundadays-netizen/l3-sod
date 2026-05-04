@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CPEC SAINT BABETH TSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header>
+    <h1>CPEC SAINT BABETH TSS WEBSITES</h1>
+    <nav>
+            <a href="#home">Home</a>
+            <a href="#department">Department</a>
+            <a href="#workshops">Workshops</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+        
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home">
+    <h2>Welcome to Our School</h2>
+    <p>Located in Kigali, CPEC Saint Babeth TSS offers quality education for Ordinary Level (S1, S2, S3).</p>
+    <button onclick="applyNow()">Apply Now</button>
+</section>
+
+<!-- DEPARTMENT -->
+<section id="department">
+    <h2>Departments</h2>
+    <p>We provide Ordinary Level education:</p>
+    <ul>
+        <li>S1</li>
+        <li>S2</li>
+        <li>S3</li>
+    </ul>
+</section>
+
+<!-- WORKSHOPS -->
+<section id="workshops">
+    <h2>Workshops</h2>
+    <div class="card">
+        <h3>Software Development Workshop</h3>
+        <p>Learn programming, web development, and app creation.</p>
+    </div>
+    <div class="card">
+        <h3>Multimedia Workshop</h3>
+        <p>Learn graphics design, video editing, and media production.</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>CPEC Saint Babeth TSS is committed to providing modern education and practical skills for students.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 CPEC Saint Babeth TSS - Kigali</p>
+</footer>
+
+<script src="script.js">
+// APPLY BUTTON
+function applyNow() {
+    alert("Thank you for applying! We will contact you soon.");
+}
+
+// FORM VALIDATION
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill in all fields!");
+        return false;
+    }
+
+    alert("Message sent successfully!");
+    return true;
+}
+</script>
+<style>
+    body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #0cfd04;
+    color: white;
+    padding: 18px;
+    text-align: center;
+}
+nav {
+    color: white;
+padding: 0;
+ text-align: center;
+}
+
+section {
+    padding: 20px;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+button {
+    background: #07fa07;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #03f503;
+}
+
+form input, form textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+footer {
+    background: #f3f704;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+</body>
+</html>
